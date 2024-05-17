@@ -1,0 +1,21 @@
+@page "/Calculation/{num=0},{num1=0}"
+@addTagHelper *, DemoApp
+@{
+    //int n = Convert.ToInt32(RouteData.Values["size"]);
+    float n1 = Convert.ToSingle(RouteData.Values["num"]);
+    float n2 = Convert.ToSingle(RouteData.Values["num1"]);
+}
+<html>
+    <head>
+        <title>DemoApp</title>
+    </head>
+    <body>
+        <b>ADDITION:</b>
+        <Math num1="@n1" num2="@n2" Operator="+"></Math><br></br>
+         <b>Multiplication:</b>
+        <Math num1="@n1" num2="@n2" Operator="*"></Math><br></br>
+        <b>Substraction</b>
+        <Math num1="@n1" num2="@n2" Operator="-"></Math>
+
+    </body>
+</html>
